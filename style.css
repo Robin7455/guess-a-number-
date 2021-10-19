@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+body {
+  height: 100vh;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+}
+
+.wrapper {
+  background-color: transparent;
+
+  backdrop-filter: blur(80px);
+  border-radius: 15px;
+  padding: 1rem;
+
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 auto;
+  box-shadow: -7.5px -7.5px 7px rgba(53, 53, 53, 0.2),
+    7.5px 7.5px 7px rgba(54, 54, 54, 0.2);
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .heading h1 {
+  font-size: 1.2rem;
+  color: #0000ff;
+}
+.wrapper .flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+}
+.wrapper .flex .totalguess,
+.wrapper .flex .secret_no {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.wrapper .flex .totalguess h3,
+.wrapper .flex .secret_no h3 {
+  color: rgb(238, 69, 69);
+  letter-spacing: 0.07rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.wrapper .flex .secret_no h3 {
+  color: yellow;
+}
+#secret_no,
+#total_guess {
+  font-size: 1.1rem;
+}
+.wrapper .main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.wrapper .main input[type="tel"]::placeholder {
+  font-size: 1.2rem;
+  opacity: 0.6;
+  font-weight: 500;
+  color: #000000;
+}
+
+.wrapper .main input {
+  border: none;
+  background-color: #ffffff;
+  opacity: 0.6;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0.3rem 1rem;
+  width: 60%;
+  margin: 0 auto;
+}
+input:focus {
+  outline: 2px solid rgb(255, 0, 200);
+}
+.wrapper .main button {
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.07rem;
+  background-color: #0000ffff;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0.3rem 1rem;
+  width: 45%;
+  margin: 0 auto;
+}
+
+.wrapper .main button:hover {
+  color: #0000ff;
+  background: #ffffff;
+  transition: all 0.2s linear;
+}
+.wrapper .main button:active {
+  transform: scale(0.9);
+  background: #0000ff;
+  color: #fff;
+  transition: all 0.2s linear;
+}
+
+#stats {
+  margin: 1.5rem 0 1.7rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #0000ff;
+  gap: 0.1rem;
+}
+#stats h2 {
+  margin-bottom: 0.5rem;
+  color: green;
+  font-size: 1.2rem;
+}
+#stats h3 {
+  font-size: 1rem;
+  text-align: center;
+}
+#stats .guessed {
+  display: flex;
+  gap: 1rem;
+}
+#stats .guessed :nth-child(2) {
+  color: #000;
+}
+
+@media screen and (min-width: 375px) {
+  .wrapper {
+    width: 85vw;
+  }
+  .wrapper h1 {
+    font-size: 1.36rem;
+  }
+  .wrapper .flex .totalguess h3,
+  .wrapper .flex .secret_no h3 {
+    letter-spacing: 0.07rem;
+    font-size: 0.98rem;
+  }
+  #secret_no,
+  #total_guess {
+    font-size: 1.3rem;
+  }
+  .wrapper .main button {
+    font-size: 1.5rem;
+    padding: 0.3rem 1rem;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .wrapper {
+    width: 70vw;
+  }
+
+  .wrapper .heading h1 {
+    font-size: 1.3rem;
+  }
+  .wrapper .flex .totalguess h3,
+  .wrapper .flex .secret_no h3 {
+    letter-spacing: 0.07rem;
+    font-size: 1rem;
+  }
+  #stats h2 {
+    font-size: 1.3rem;
+  }
+  #stats h3 {
+    font-size: 1.1rem;
+  }
+  .wrapper .main button {
+    padding: 0.5rem 1rem;
+  }
+  .wrapper .main input {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .wrapper {
+    width: 60vw;
+  }
+  .wrapper .heading h1 {
+    font-size: 1.8rem;
+  }
+  .wrapper .flex .totalguess h3,
+  .wrapper .flex .secret_no h3 {
+    letter-spacing: 0.07rem;
+    font-size: 1.2rem;
+  }
+  #secret_no,
+  #total_guess {
+    font-size: 1.5rem;
+  }
+  .wrapper .main button {
+    font-size: 1.6rem;
+    padding: 0.8rem 1rem;
+  }
+  #stats h2 {
+    font-size: 1.4rem;
+  }
+  #stats h3 {
+    font-size: 1.2rem;
+  }
+  .wrapper .main input[type="tel"]::placeholder {
+    font-size: 1.5rem;
+  }
+  .wrapper .main input {
+    font-size: 1.5rem;
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .wrapper {
+    width: 70vw;
+  }
+  .heading {
+    flex-direction: row;
+    gap: 0.8rem;
+  }
+  .wrapper .flex {
+    margin: 0 2rem;
+  }
+  .wrapper .heading h1 {
+    font-size: 1.9rem;
+  }
+  .wrapper .flex .totalguess h3,
+  .wrapper .flex .secret_no h3 {
+    letter-spacing: 0.07rem;
+    font-size: 1.3rem;
+  }
+
+  .wrapper .main input {
+    font-size: 1.9rem;
+    padding: 0.8rem 1.2rem;
+    width: 40%;
+  }
+
+  #secret_no,
+  #total_guess {
+    font-size: 2rem;
+  }
+  .wrapper .main button {
+    font-size: 1.9rem;
+    padding: 0.8rem 1.2rem;
+    width: 30%;
+  }
+  #stats h2 {
+    font-size: 1.7rem;
+  }
+  #stats h3 {
+    font-size: 1.5rem;
+  }
+  .wrapper .main input[type="tel"]::placeholder {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .wrapper {
+    width: 65vw;
+  }
+  .heading {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .wrapper .flex {
+    margin: 0 7rem;
+  }
+  .wrapper .heading h1 {
+    font-size: 2.6rem;
+  }
+  .wrapper .flex .totalguess h3,
+  .wrapper .flex .secret_no h3 {
+    letter-spacing: 0.07rem;
+    font-size: 1.7rem;
+  }
+
+  .wrapper .main input {
+    font-size: 1.9rem;
+    padding: 0.8rem 1.2rem;
+    width: 40%;
+  }
+
+  #secret_no,
+  #total_guess {
+    font-size: 2.2rem;
+  }
+  .wrapper .main button {
+    font-size: 1.9rem;
+    padding: 0.8rem 1.2rem;
+    width: 30%;
+  }
+  #stats h2 {
+    font-size: 1.8rem;
+  }
+  #stats h3 {
+    font-size: 1.5rem;
+  }
+  .wrapper .main input[type="tel"]::placeholder {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .wrapper {
+    width: 60vw;
+  }
+  .heading {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .wrapper .flex {
+    margin: 0 8rem;
+  }
+  .wrapper .heading h1 {
+    font-size: 3rem;
+  }
+  .wrapper .flex .totalguess h3,
+  .wrapper .flex .secret_no h3 {
+    letter-spacing: 0.07rem;
+    font-size: 2rem;
+  }
+
+  .wrapper .main input {
+    font-size: 1.9rem;
+    padding: 1rem 1.5rem;
+    width: 40%;
+  }
+
+  #secret_no,
+  #total_guess {
+    font-size: 2.2rem;
+  }
+  .wrapper .main button {
+    font-size: 1.9rem;
+    padding: 1rem 1.5rem;
+    width: 30%;
+  }
+  #stats h2 {
+    font-size: 2.2rem;
+  }
+  #stats h3 {
+    font-size: 2rem;
+  }
+  .wrapper .main input[type="tel"]::placeholder {
+    font-size: 1.9rem;
+  }
+  .wrapper .main {
+    gap: 1.5rem;
+  }
+}

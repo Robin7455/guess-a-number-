@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Guess a number</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="wrapper">
+            <div class="heading">
+                <h1> Guess A Number Between</h1>
+                <h1>1 - 100</h1>
+            </div>
+
+            <div class="flex">
+                <div class="totalguess">
+                    <h3> Guesses Left:</h3>
+                    <h2 id="message2">10</h2>
+                </div>
+                <div class="secret_no">
+                    <h3>Secret No:</h3>
+                    <h2 id="secret_no">?</h2>
+                </div>
+            </div>
+            <div class="main">
+                <input type="tel" placeholder="Enter Number" id="guess" maxlength="3" minlength="1">
+                <button onclick="play()" id="my_btn">Guess</button>
+            </div>
+            <div id="stats">
+                <h2 id="message1">Let's Start </h2>
+                <!-- <div class="guessed">
+                    <h3>No. of Guesses: </h3>
+                    <h3 id=message1>0</h3>
+                </div> -->
+                <div class="guessed">
+                    <h3 id="message"> Guessed Number are : None</h3>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
